@@ -1,0 +1,25 @@
+
+.click {
+	@media only screen and (any-hover: hover) {
+		&:hover {
+			cursor: pointer;
+			opacity: 0.7;
+		}
+	}
+	&:active { opacity: 0.4; }
+}
+
+.click-fill {
+	transition: background-color .2s linear;
+
+	@media only screen and (any-hover: hover) {
+		&:hover {
+			background-color: var(--back-dark);
+			cursor: pointer;
+		}
+	}
+	&:active {
+		background-color: var(--back-dark);
+		opacity: 0.7;
+	}
+}
