@@ -1,17 +1,35 @@
 <header>
 	<div class="header-container">
 		<h2 class="header-title click">Professora Edna Teles</h2>
-		<nav class="header-links">
-			<a class="header-link click-fill">Inicio</a>
-			<a class="header-link click-fill">Primário</a>
-			<a class="header-link click-fill">Ensino Fundamental</a>
-			<a class="header-link click-fill">Ensino Médio</a>
-			<a class="header-link click-fill">Todos os Jogos</a>
-			<a class="header-link click-fill">Sobre</a>
+		<nav id="header-navbar" class="header-links">
+			<a *ngFor="let link of linksList" class="header-link click-fill" [href]="link.link">
+				{{ link.label }}
+			</a>
 		</nav>
 	</div>
 	<div class="header-container">
-		<img class="header-button click-fill" src="./assets/images/menu.svg"/>
-		<img class="header-button click-fill" src="./assets/images/cart.svg"/>
+		<div id="header-navmenu" ngbDropdown class="header-button click-fill">
+			<img id="menuOptions" ngbDropdownToggle class="header-button-image" src="./assets/images/menu.svg" />
+
+			<div class="header-menu" ngbDropdownMenu aria-labelledby="menuOptions">
+				<a *ngFor="let link of linksList" class="header-menu-item click-fill" [href]="link.link" ngbDropdownItem>
+					{{ link.label}}
+				</a>
+			</div>
+		</div>
+
+		<button class="header-button click-fill" type="button" data-bs-toggle="offcanvas" data-bs-target=#idCart (aria-controls)="idCart">
+			<img class="header-button-image" src="./assets/images/cart.svg" />
+		</button>
+
+		<app-cart-panel [idCart]="idCart"/>
+
+		<button class="header-button click-fill" type="button" data-bs-toggle="offcanvas" data-bs-target=#idUser (aria-controls)="idUser">
+			<img class="header-button-image" src="./assets/images/user.svg" />
+		</button>
+
+		<app-user-panel [idUser]="idUser"/>
 	</div>
 </header>
+
+

@@ -10,6 +10,7 @@
 }
 
 .click-fill {
+	background-color: transparent;
 	transition: background-color .2s linear;
 
 	@media only screen and (any-hover: hover) {

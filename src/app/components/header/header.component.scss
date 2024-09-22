@@ -1,4 +1,8 @@
+
+$header-size: 60px;
+
 header {
+	position: fixed;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -8,7 +12,7 @@ header {
 	background-color: var(--back-normal);
 	min-width: 100%;
 	max-width: 100%;
-	height: 55px;
+	height: $header-size;
 
 	.header-container {
 		display: flex;
@@ -19,8 +23,13 @@ header {
 		height: 100%;
 
 		.header-title {
+			margin: 0px;
+			padding: 0px;
+
 			user-select: none;
 			padding-right: 25px;
+			font-size: 1.5em;
+			text-align: center;
 		}
 
 		.header-links {
@@ -40,14 +49,95 @@ header {
 				padding: 0px 15px;
 
 				height: 100%;
+
+				text-decoration: none;
+				color: var(--text);
 			}
 		}
 
 		.header-button {
-			user-select: none;
-			padding: 8px 16px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
-			height: 100%;
+			height: $header-size;
+			border: none;
+
+			.header-button-image {
+				user-select: none;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding: calc($header-size/5) calc($header-size/4);
+
+				height: $header-size;
+			}
+
+			.header-menu {
+
+				background-color: var(--back-normal);
+				animation: onMenuAnim 0.3s ease-in-out;
+
+				@keyframes onMenuAnim {
+					0%   { opacity: 0; transform: translateY(100px);  }
+					100% { opacity: 1; transform: translateY(61px); }
+				}
+
+				.header-menu-item {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+
+					transition: background-color .2s linear;
+					background-color: transparent;
+					height: $header-size;
+
+					color: var(--text);
+
+					@media only screen and (any-hover: hover) {
+						&:hover {
+							background-color: var(--back-dark);
+							cursor: pointer;
+						}
+					}
+					&:active {
+						background-color: var(--back-dark);
+						opacity: 0.7;
+					}
+				}
+			}
 		}
 	}
+}
+
+#header-navmenu {
+	display: none;
+}
+
+@media only screen and (max-width: 1160px) {
+	header { .header-container { .header-title {
+		font-size: 1.1em;
+	}}}
+}
+
+@media only screen and (max-width: 1082px) {
+	#header-navmenu {
+		display: flex;
+	}
+	#header-navbar {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	header { .header-container {
+
+		.header-title {
+			padding-right: 5px;
+		}
+
+		.header-button-container { .header-button {
+			padding: calc($header-size/4) 8px;
+			min-width: auto;
+	}}}}
 }
