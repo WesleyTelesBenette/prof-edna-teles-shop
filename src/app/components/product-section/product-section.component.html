@@ -1,0 +1,18 @@
+
+<section class="product-section" appLazyLoad (isVisible)="loadComponent = true">
+	<ng-container *ngIf="loadComponent">
+		<h3 class="product-section-title">
+			MAIS VENDIDOS
+		</h3>
+		<hr class="product-section-divider"/>
+
+		<div class="product-section-content">
+			<app-product
+			*ngFor="let product of products"
+				[title]='product.name'
+				[priceInCents]='product.price'
+				[imageUrl]='product.imageUrl'
+			/>
+		</div>
+	</ng-container>
+</section>
