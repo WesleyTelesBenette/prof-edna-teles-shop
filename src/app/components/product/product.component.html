@@ -1,0 +1,23 @@
+
+<article class="product">
+	<div class="product-container-top click">
+		<div class="product-image-container">
+			<img class="product-image" [src]="imageUrl"/>
+		</div>
+		<h4 class="product-title">{{ title }}</h4>
+	</div>
+	<div class="product-container-bottom">
+		<div class="product-price">
+			<p class="reais">R${{ getPrice()[0] }}</p>
+			<p class="cents">,{{ getPrice()[1] }}</p>
+		</div>
+		<div class="product-buttons">
+			<button class="product-button click">
+				Comprar
+			</button>
+			<button class="product-button click">
+				<img class="product-button-image" src="./assets/images/cart-add.svg"/>
+			</button>
+		</div>
+	</div>
+</article>
