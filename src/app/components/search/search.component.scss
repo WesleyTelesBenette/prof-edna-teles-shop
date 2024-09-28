@@ -5,14 +5,19 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 130px 40px;
+	padding: 100px 40px 150px 40px;
 	gap: 10px;
 
 	width: 100%;
+	background: linear-gradient(
+		to top,
+		var(--back-light),
+		var(--back-light-p),
+		var(--back-light-p)
+	);
 	//background-image: url("https://i.imgur.com/jZ5Wf0U.png");
 	//background-size: cover;
 	//background-position: center;
-	background-color: var(--back-light-p);
 
 	// &::after {
 	// 	z-index: 1;
