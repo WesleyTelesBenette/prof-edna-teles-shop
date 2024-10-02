@@ -18,6 +18,7 @@ header {
 	min-width: 100%;
 	max-width: 100%;
 	height: $header-size;
+	box-shadow: var(--back-dark-p) 0px 3px 0.75em;
 
 	.header-container {
 		display: flex;

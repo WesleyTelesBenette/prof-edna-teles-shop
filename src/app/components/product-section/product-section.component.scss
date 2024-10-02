@@ -4,10 +4,9 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 50px 0px;
+	padding: 70px 0px;
 	width: 100%;
 	min-height: 500px;
-	background-color: var(--back-light);
 
 	.product-section-title {
 		margin: 0;
@@ -18,13 +17,14 @@
 		font-size: 3em;
 		color: var(--text);
 		text-align: center;
+		line-height: 1em;
 
 		animation: anim_start_title .5s ease-in-out;
 
 		@keyframes anim_start_title {
-			0% { transform: scaleY(0); }
-			95% { transform: scaleY(1.02); }
-			100% { transform: scaleY(1); }
+			0% { transform: scaleX(0); }
+			95% { transform: scaleX(1.02); }
+			100% { transform: scaleX(1); }
 		}
 	}
 
@@ -54,4 +54,12 @@
 		width: 100%;
 		height: 100%;
 	}
+}
+
+.colorful {
+	background-color: var(--back-light);
+}
+
+.white {
+	background-color: var(--back-light-p);
 }
