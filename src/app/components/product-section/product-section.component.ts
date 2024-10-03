@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ProductComponent } from '../product/product.component';
 import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
 
@@ -10,25 +10,10 @@ import { LazyLoadDirective } from '../../shared/directives/lazy-load.directive';
   templateUrl: './product-section.component.html',
   styleUrl: './product-section.component.scss'
 })
-export class ProductSectionComponent implements OnInit {
+export class ProductSectionComponent {
+
+	@Input() color: 'white' | 'colorful' = 'white';
+	@Input() title: string = '';
 
 	public loadComponent: boolean = false;
-	public products: {name: string; price: bigint; imageUrl: string;}[] = [];
-
-	public ngOnInit(): void {
-		//Enquanto não tem banco de dados
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-		this.products.push({name: 'Dominó da Porcentagem', price: BigInt(4999), imageUrl: 'https://i.imgur.com/0kV15x1.jpg'});
-	}
-
 }
