@@ -4,15 +4,14 @@
 	position: relative;
 	align-items: center;
 	justify-content: center;
-	margin: 5px;
+	margin: 1vw;
 
 	width: 200px;
-	max-width: 44vw;
+	max-width: 30vw;
 	aspect-ratio: 1 / 1;
 	overflow: hidden;
 
 	.category-image {
-
 		display: block;
 		width: auto;
 		height: 100%;
@@ -57,4 +56,26 @@
 	0% { transform: scale(0); }
 	95% { transform: scale(1.02); }
 	100% { transform: scale(1); }
+}
+
+@media only screen and (max-width: 650px) {
+
+}
+
+@media only screen and (max-width: 420px) {
+	.category {
+		min-width: 90vw;
+		max-width: auto;
+		aspect-ratio: 5 / 1;
+		margin: 0px;
+
+		.category-image {
+			width: 100%;
+			height: auto;
+		}
+
+		.category-link {
+			font-size: 0.9em;
+		}
+	}
 }
