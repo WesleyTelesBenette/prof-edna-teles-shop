@@ -1,5 +1,7 @@
 
 .click {
+	transition: opacity .2s linear;
+
 	@media only screen and (any-hover: hover) {
 		&:hover {
 			cursor: pointer;

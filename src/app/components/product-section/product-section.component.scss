@@ -12,13 +12,12 @@
 		margin: 0;
 		padding: 20px;
 
-		background-color: var(--back-normal);
-
 		font-size: 3em;
 		color: var(--text);
 		text-align: center;
 		line-height: 1em;
 
+		background-color: var(--back-normal);
 		animation: anim_start_title .5s ease-in-out;
 
 		@keyframes anim_start_title {
@@ -61,5 +60,16 @@
 }
 
 .white {
+
 	background-color: var(--back-light-p);
+
+
+	.product-section-title {
+		color: var(--text-mark-strong);
+		background-color: transparent;
+	}
+
+	.product-section-divider {
+		background-color: var(--text-mark-strong);
+	}
 }
