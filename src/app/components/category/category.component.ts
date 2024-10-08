@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import Category from '../../models/category.model';
 
 @Component({
 	selector: 'app-category',
@@ -9,7 +10,5 @@ import { Component, Input } from '@angular/core';
 	styleUrl: './category.component.scss'
 })
 export class CategoryComponent {
-	@Input() name: string = 'categoria';
-	@Input() link: string = '#';
-	@Input() imageUrl!: string;
+	@Input() category!: Category;
 }

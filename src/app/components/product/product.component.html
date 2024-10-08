@@ -2,14 +2,14 @@
 <article class="product">
 	<div class="product-container-top click">
 		<div class="product-image-container">
-			<img class="product-image" [src]="imageUrl"/>
+			<img class="product-image" [src]="product.coverImage"/>
 		</div>
-		<h4 class="product-title">{{ title }}</h4>
+		<h4 class="product-title">{{ product.name }}</h4>
 	</div>
 	<div class="product-container-bottom">
 		<div class="product-price">
-			<p class="reais">R${{ getPrice()[0] }}</p>
-			<p class="cents">,{{ getPrice()[1] }}</p>
+			<p class="reais">R${{ priceInteger }}</p>
+			<p class="cents">,{{ priceDecimal }}</p>
 		</div>
 		<div class="product-buttons">
 			<button class="product-button click">
