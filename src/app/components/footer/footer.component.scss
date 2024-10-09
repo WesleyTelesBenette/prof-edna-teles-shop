@@ -57,8 +57,10 @@
 				text-wrap: wrap;
 				font-size: 1.2em;
 				line-height: 1.5em;
+				font-weight: 600;
 
 				span {
+					font-weight: 400;
 					font-style: italic;
 				}
 			}
@@ -100,6 +102,18 @@
 @media only screen and (max-width: 830px) {
 	.footer { .footer-content {
 		flex-direction: column;
+		gap: 0px;
+
+		.footer-profile {
+			min-height: 50px;
+		}
+
+		.footer-posts {	.footer-description {
+			padding: 12px;
+
+			text-align: center;
+			font-size: 1em;
+		}}
 	}}
 }
 
