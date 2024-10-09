@@ -9,19 +9,21 @@ import { CategoryComponent } from '../../components/category/category.component'
 import Product from '../../models/product.model';
 import { HomePageViewModel } from '../../view-models/home-page.viewmodel';
 import Category from '../../models/category.model';
+import { FooterComponent } from "../../components/footer/footer.component";
 
 @Component({
 	selector: 'app-home-page',
 	standalone: true,
 	imports: [
-		CommonModule,
-		HeaderComponent,
-		BannerComponent,
-		SearchComponent,
-		ProductSectionComponent,
-		ProductComponent,
-		CategoryComponent
-	],
+    CommonModule,
+    HeaderComponent,
+    BannerComponent,
+    SearchComponent,
+    ProductSectionComponent,
+    ProductComponent,
+    CategoryComponent,
+    FooterComponent
+],
 	templateUrl: './home-page.component.html',
 	styleUrl: './home-page.component.scss'
 })
@@ -41,9 +43,9 @@ export class HomePageComponent implements OnInit
 		try
 		{
 			this.recentPacks     = await this._viewModel.getRecentPacks();
-			this.packCategories      = await this._viewModel.getPackCategories();
+			this.packCategories  = await this._viewModel.getPackCategories();
 			this.bestSellers     = await this._viewModel.getBestSellers();
-			this.gameCategories    = await this._viewModel.getGameCategories();
+			this.gameCategories  = await this._viewModel.getGameCategories();
 			this.recommendations = await this._viewModel.getRecommendations();
 		}
 		catch(error)
