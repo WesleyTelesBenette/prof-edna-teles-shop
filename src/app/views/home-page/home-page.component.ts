@@ -27,29 +27,24 @@ import { FooterComponent } from "../../components/footer/footer.component";
 	templateUrl: './home-page.component.html',
 	styleUrl: './home-page.component.scss'
 })
-export class HomePageComponent implements OnInit
-{
+export class HomePageComponent implements OnInit {
 	public recentPacks!: Product[];
 	public packCategories!: Category[];
 	public bestSellers!: Product[];
 	public gameCategories!: Category[];
 	public recommendations!: Product[];
 
-	public constructor(private _viewModel: HomePageViewModel)
-		{}
+	public constructor(private _viewModel: HomePageViewModel) {}
 
-	public async ngOnInit(): Promise<void>
-	{
-		try
-		{
+	public async ngOnInit(): Promise<void> {
+		try {
 			this.recentPacks     = await this._viewModel.getRecentPacks();
 			this.packCategories  = await this._viewModel.getPackCategories();
 			this.bestSellers     = await this._viewModel.getBestSellers();
 			this.gameCategories  = await this._viewModel.getGameCategories();
 			this.recommendations = await this._viewModel.getRecommendations();
 		}
-		catch(error)
-		{
+		catch(error) {
 			console.error();
 
 			//Redirecionar para página de erro
