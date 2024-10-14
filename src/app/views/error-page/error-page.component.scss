@@ -1,0 +1,58 @@
+
+.error-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 70px;
+
+	height: 100vh;
+	width: 100vw;
+	background-color: var(--back-dark);
+
+	text-align: center;
+
+	.error-title {
+		font-size: 1.5em;
+	}
+
+	.error-code {
+		font-size: 15em;
+		font-weight: 600;
+		color: var(--text-mark);
+	}
+
+	.error-subtitle {
+		font-size: 1.5em;
+	}
+
+	.error-button {
+		padding: 15px;
+
+		border: none;
+		border-radius: 15px;
+		background-color: var(--back-normal);
+		box-shadow: var(--back-dark-p) 0px 0px 2em;
+	}
+}
+
+@media only screen and (max-width: 515px) {
+	.error-container {
+		gap: 55px;
+
+		.error-code {
+			font-size: 12em;
+		}
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	.error-container {
+		gap: 40px;
+
+		.error-code {
+			font-size: 9em;
+		}
+	}
+}
+

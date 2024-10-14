@@ -1,1 +1,7 @@
-<p>error-page works!</p>
+
+<div class="error-container">
+	<h2 class="error-title">ERRO</h2>
+	<h1 class="error-code">{{ code }}</h1>
+	<p class="error-subtitle">{{ getErrorMessage(code) }}</p>
+	<button class="error-button click" type="button" (click)="gotoHome()">Voltar à Página Principal</button>
+</div>
