@@ -1,6 +1,6 @@
 <header>
 	<div class="header-container">
-		<h2 class="header-title click">Professora Edna Teles</h2>
+		<h2 class="header-title click" (click)="gotoMenu()">Professora Edna Teles</h2>
 		<nav id="header-navbar" class="header-links">
 			<a *ngFor="let link of linksList" class="header-link click-fill" [href]="link.link">
 				{{ link.label }}

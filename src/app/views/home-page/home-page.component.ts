@@ -10,6 +10,7 @@ import Product from '../../models/product.model';
 import { HomePageViewModel } from '../../view-models/home-page.viewmodel';
 import Category from '../../models/category.model';
 import { FooterComponent } from "../../components/footer/footer.component";
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-home-page',
@@ -34,7 +35,10 @@ export class HomePageComponent implements OnInit {
 	public gameCategories!: Category[];
 	public recommendations!: Product[];
 
-	public constructor(private _viewModel: HomePageViewModel) {}
+	public constructor(
+		private _viewModel: HomePageViewModel,
+		private _nav: Router
+	) {}
 
 	public async ngOnInit(): Promise<void> {
 		try {
@@ -45,9 +49,8 @@ export class HomePageComponent implements OnInit {
 			this.recommendations = await this._viewModel.getRecommendations();
 		}
 		catch(error) {
-			console.error();
-
-			//Redirecionar para página de erro
+			console.error(error);
+			this._nav.navigate(['/error', 500]);
 		}
 	}
 }
