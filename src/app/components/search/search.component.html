@@ -5,6 +5,7 @@
 	<hr class="search-divider"/>
 	<div class="search-inputs">
 		<input
+			#searchInput
 			class="search-input"
 			type="search"
 			list="search-terms"
@@ -14,6 +15,6 @@
 			placeholder="Digite sua busca aqui..."
 		/>
 		<datalist #searchTerms id="search-terms"></datalist>
-		<button class="search-button click" type="button">Procurar</button>
+		<button class="search-button click" type="button" (click)="search()">Procurar</button>
 	</div>
 </div>
