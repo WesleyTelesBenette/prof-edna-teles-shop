@@ -1,0 +1,53 @@
+
+<app-header/>
+
+<main class="product">
+	<div class="product-presentation">
+
+		<div class="product-images">
+			<figure class="product-thumb-container">
+				<img class="product-thumb" [src]="product.images[coverImageIndex]"/>
+			</figure>
+			<div class="product-mini-images">
+
+				<figure *ngFor="let image of product.images" class="product-mini-image-container">
+					<img class="product-mini-image click" [src]="image"/>
+				</figure>
+			</div>
+		</div>
+
+		<div class="product-info">
+			<h1 class="product-title">{{ product.name }}</h1>
+			<p class="product-text">{{ product.description }}</p>
+			<h2 class="product-subtitle">Detalhes</h2>
+
+			<ng-container *ngIf="product.type == 'game'">
+				<p class="product-text"><span>Peças:</span> {{ product.totalPieces }}.</p>
+				<p class="product-text"><span>Jogadores:</span> {{ product.totalPlayers }}.</p>
+			</ng-container>
+			<ng-container *ngIf="product.type == 'pack'">
+				<p class="product-text"><span>Quantidade de Jogos: </span> {{ product.totalGames }}.</p>
+				<p class="product-text"><span>Jogos</span> {{ product.includeGames}}.</p>
+			</ng-container>
+			<div class="product-price-container">
+				<h2 class="product-price-old">
+					<span>de R${{ priceOld }}</span> &nbsp; por apenas
+				</h2>
+				<h2 class="product-price">
+					<p class="reais">R${{ priceInteger }}</p>
+					<p class="cents">,{{ priceDecimal }}</p>
+				</h2>
+			</div>
+			<div class="product-buttons">
+				<button class="product-button click">
+					<img class="product-button-card" src="./assets/images/cart-add.svg"/>
+					Adicionar ao carrinho
+				</button>
+				<button class="product-button click">Comprar</button>
+			</div>
+		</div>
+	</div>
+
+</main>
+
+<app-footer/>
