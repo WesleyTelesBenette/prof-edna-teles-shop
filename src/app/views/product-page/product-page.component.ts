@@ -15,7 +15,10 @@ import Product from '../../models/product.model';
 		FooterComponent
 	],
 	templateUrl: './product-page.component.html',
-	styleUrl: './product-page.component.scss'
+	styleUrls: [
+		'./product-page.component.scss',
+		'./product-page-media.component.scss'
+	]
 })
 export class ProductPageComponent implements OnInit {
 
