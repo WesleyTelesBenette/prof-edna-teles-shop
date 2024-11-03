@@ -12,16 +12,16 @@ export class HomePageViewModel {
 
 		//Placeholder
 		return [
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game')
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game')
 		];
 	}
 
@@ -30,10 +30,10 @@ export class HomePageViewModel {
 
 		//Placeholder
 		return [
-			new Category(0, 'Ensino Fundamental I', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Ensino Fundamental II', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Ensino Médio', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Todos os Jogos', 'https://i.imgur.com/0kV15x1.jpg'),
+			new Category(0, 'Ensino Fundamental I', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Ensino Fundamental II', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Ensino Médio', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Todos os Jogos', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
 		];
 	}
 
@@ -42,16 +42,16 @@ export class HomePageViewModel {
 
 		//Placeholder
 		return [
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game')
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game')
 		];
 	}
 
@@ -60,14 +60,14 @@ export class HomePageViewModel {
 
 		//Placeholder
 		return [
-			new Category(0, 'Dominó', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Jogo da Memória', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Uno', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Tabuleiro', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Bingo', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Charada', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Jogo da Memória', 'https://i.imgur.com/0kV15x1.jpg'),
-			new Category(0, 'Dominó', 'https://i.imgur.com/0kV15x1.jpg'),
+			new Category(0, 'Dominó', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Jogo da Memória', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Uno', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Tabuleiro', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Bingo', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Charada', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Jogo da Memória', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
+			new Category(0, 'Dominó', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
 		];
 	}
 
@@ -76,16 +76,16 @@ export class HomePageViewModel {
 
 		//Placeholder
 		return [
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://i.imgur.com/0kV15x1.jpg', 'game')
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
+			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game')
 		];
 	}
 }
