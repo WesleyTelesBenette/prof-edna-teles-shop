@@ -22,12 +22,14 @@
 			<h2 class="product-subtitle">Detalhes</h2>
 
 			<ng-container *ngIf="product.type == 'game'">
-				<p class="product-text"><span>Peças:</span> {{ product.totalPieces }}.</p>
-				<p class="product-text"><span>Jogadores:</span> {{ product.totalPlayers }}.</p>
+				<p class="product-text"><span>Peças:</span> {{ product.totalPieces }} unidade.</p>
+				<p class="product-text"><span>Jogadores:</span> {{ product.totalPlayers }} pessoas.</p>
+				<p class="product-text"><span>Formato:</span> Jogo em PDF (arquivo enviado por e-mail).</p>
 			</ng-container>
 			<ng-container *ngIf="product.type == 'pack'">
-				<p class="product-text"><span>Quantidade de Jogos: </span> {{ product.totalGames }}.</p>
-				<p class="product-text"><span>Jogos</span> {{ product.includeGames}}.</p>
+				<p class="product-text"><span>Quantidade de Jogos: </span> {{ product.totalGames } jogos.</p>
+				<p class="product-text"><span>Jogos</span> {{ product.includeGamesIds}}.</p>
+				<p class="product-text"><span>Formato:</span> Jogos em PDF (arquivos enviados por e-mail).</p>
 			</ng-container>
 			<div class="product-price-container">
 				<h2 class="product-price-old">

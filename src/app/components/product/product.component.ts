@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import Product from '../../models/product.model';
+import ProductMini from '../../models/product-mini.model';
 
 @Component({
 	selector: 'app-product',
@@ -9,7 +9,7 @@ import Product from '../../models/product.model';
 	styleUrl: './product.component.scss'
 })
 export class ProductComponent implements OnInit {
-	@Input() product!: Product;
+	@Input() product!: ProductMini;
 	public priceInteger!: string;
 	public priceDecimal!: string;
 

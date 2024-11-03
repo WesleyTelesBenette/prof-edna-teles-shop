@@ -4,7 +4,7 @@ import ProductPageViewModel from '../../view-models/product-page.viewmode';
 import { HeaderComponent } from "../../components/header/header.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { CommonModule } from '@angular/common';
-import GamePack from '../../models/game-pack.model';
+import Product from '../../models/product.model';
 
 @Component({
 	selector: 'app-product-page',
@@ -19,7 +19,7 @@ import GamePack from '../../models/game-pack.model';
 })
 export class ProductPageComponent implements OnInit {
 
-	public product: GamePack = new GamePack(-1, "", 0, "AAA", [''], "game", 16, 4, null, null);
+	public product: Product = new Product(-1, '', 0, '', [], 'game', 0, 0, null, null, []);
 	public coverImageIndex: number = 0;
 	public priceInteger: string = '';
 	public priceDecimal: string = '';
@@ -42,7 +42,7 @@ export class ProductPageComponent implements OnInit {
 
 		if (id >= 0) {
 			try {
-				const product = await this._viewModel.getGamePackById(id)
+				const product = await this._viewModel.getProductById(id)
 
 				if (product != null) {
 					this.product = product;

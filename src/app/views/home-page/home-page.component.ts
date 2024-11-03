@@ -6,7 +6,7 @@ import { ProductComponent } from '../../components/product/product.component';
 import { CommonModule } from '@angular/common';
 import { ProductSectionComponent } from "../../components/product-section/product-section.component";
 import { CategoryComponent } from '../../components/category/category.component';
-import Product from '../../models/product.model';
+import ProductMini from '../../models/product-mini.model';
 import { HomePageViewModel } from '../../view-models/home-page.viewmodel';
 import Category from '../../models/category.model';
 import { FooterComponent } from "../../components/footer/footer.component";
@@ -29,11 +29,11 @@ import { Router } from '@angular/router';
 	styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent implements OnInit {
-	public recentPacks!: Product[];
+	public recentPacks!: ProductMini[];
 	public packCategories!: Category[];
-	public bestSellers!: Product[];
+	public bestSellers!: ProductMini[];
 	public gameCategories!: Category[];
-	public recommendations!: Product[];
+	public recommendations!: ProductMini[];
 
 	public constructor(
 		private _viewModel: HomePageViewModel,
