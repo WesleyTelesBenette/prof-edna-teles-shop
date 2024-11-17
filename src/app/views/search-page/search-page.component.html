@@ -1,0 +1,12 @@
+
+<ng-container *ngIf="loadData === false">
+	<app-loading/>
+</ng-container>
+
+<ng-container *ngIf="loadData === true">
+
+	<app-header/>
+
+	<p>{{ termShow }}</p>
+
+</ng-container>

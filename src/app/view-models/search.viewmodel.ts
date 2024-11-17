@@ -30,9 +30,4 @@ export default class SearchViewModel {
 			});
 		}
 	}
-
-	public searchProducts(search: string): Product[] {
-		//...
-		return [];
-	}
 }

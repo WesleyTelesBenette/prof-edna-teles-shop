@@ -1,91 +1,37 @@
 import { Injectable } from '@angular/core';
-import Category from '../models/category.model';
-import ProductMini from '../models/product-mini.model';
+import RequestApiService, { ApiResponse } from '../services/request-api.service';
+import Page from '../models/page.model';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class HomePageViewModel {
 
-	public async getRecentPacks(): Promise<ProductMini[]> {
-		//...
+	private url = 'https://prof-edna-teles-shop-api.onrender.com';
 
-		//Placeholder
-		return [
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game')
-		];
+	public constructor(private readonly _requestService: RequestApiService) {}
+
+	public async getPageContent(): Promise<ApiResponse<Page>> {
+		return await this._requestService.request<Page>(this.url, 'get', null, 'page/home', null);
 	}
 
-	public async getPackCategories(): Promise<Category[]> {
-		//...
+	// public async getRecentProducts(): Promise<ApiResponse<ProductMini>> {
+	// 	return await this._requestService.request<ProductMini>(this.url, 'get', null, 'product/recent/10', null);
+	// }
 
-		//Placeholder
-		return [
-			new Category(0, 'Ensino Fundamental I', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Ensino Fundamental II', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Ensino Médio', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Todos os Jogos', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-		];
-	}
+	// public async getProductCategories(): Promise<ApiResponse<Category>> {
+	// 	return await this._requestService.request<Category>(this.url, 'get', null, 'category/', null);
+	// }
 
-	public async getBestSellers(): Promise<ProductMini[]> {
-		//...
+	// public async getBestSellers(): Promise<ApiResponse<ProductMini>> {
+	// 	return await this._requestService.request<ProductMini>(this.url, 'get', null, 'product/random/10', null);
+	// }
 
-		//Placeholder
-		return [
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game')
-		];
-	}
+	// public async getGameCategories(): Promise<ApiResponse<string>> {
+	// 	return await this._requestService.request<string>(this.url, 'get', null, 'product/types', null);
+	// }
 
-	public async getGameCategories(): Promise<Category[]> {
-		//...
-
-		//Placeholder
-		return [
-			new Category(0, 'Dominó', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Jogo da Memória', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Uno', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Tabuleiro', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Bingo', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Charada', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Jogo da Memória', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-			new Category(0, 'Dominó', 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg'),
-		];
-	}
-
-	public async getRecommendations(): Promise<ProductMini[]> {
-		//...
-
-		//Placeholder
-		return [
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game'),
-			new ProductMini(0, 'Dominó da Porcentagem', 4999, [], 'https://res.cloudinary.com/dnchjuhxp/image/upload/v1730595103/test/y8wfzcrmyx1doweyrsfz.jpg', 'game')
-		];
-	}
+	// public async getRecommendations(): Promise<ApiResponse<ProductMini>> {
+	// 	return await this._requestService.request<ProductMini>(this.url, 'get', null, 'product/random/10', null);
+	// }
 }

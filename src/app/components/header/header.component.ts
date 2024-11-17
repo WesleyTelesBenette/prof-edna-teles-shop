@@ -13,21 +13,25 @@ import { Router } from '@angular/router';
 	styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-	protected idUser: string = "idUser";
-	protected idCart: string = "idCart";
+	protected idUser: string = 'idUser';
+	protected idCart: string = 'idCart';
 
 	public constructor(private _nav: Router) {}
 
-	protected linksList: {label: string, link: string}[] =
+	protected linksList: {label: string, link: string[]}[] =
 	[
-		{label: "Ensino Médio", link: "#"},
-		{label: "Ensino Fundamenta", link: "#"},
-		{label: "Primário", link: "#"},
-		{label: "Todos os Jogos", link: "#"},
-		{label: "Sobre", link: "#"}
+		{label: 'Ensino Médio', link: ['/search', 'Ensino+Médio']},
+		{label: 'Ensino Fundamenta', link: ['/search', 'Ensino+Fundamental']},
+		{label: 'Primário', link: ['/search', 'Primário']},
+		{label: 'Todos os Jogos', link: ['/search', 'Jogo']},
+		{label: 'Sobre', link: ['/sobre']}
 	];
 
 	public gotoMenu() {
 		this._nav.navigate(['/']);
+	}
+
+	public gotoLink(link: string[]) {
+		this._nav.navigate(link);
 	}
 }

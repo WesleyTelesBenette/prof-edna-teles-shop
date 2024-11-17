@@ -10,5 +10,6 @@ import Category from '../../models/category.model';
 	styleUrl: './category.component.scss'
 })
 export class CategoryComponent {
-	@Input() category!: Category;
+	@Input() category: Category | null = null;
+	@Input() name: string = '';
 }

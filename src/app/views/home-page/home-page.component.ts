@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { BannerComponent } from "../../components/banner/banner.component";
 import { SearchComponent } from "../../components/search/search.component";
@@ -11,42 +11,61 @@ import { HomePageViewModel } from '../../view-models/home-page.viewmodel';
 import Category from '../../models/category.model';
 import { FooterComponent } from "../../components/footer/footer.component";
 import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
+import { LoadingComponent } from "../../components/loading/loading.component";
 
 @Component({
 	selector: 'app-home-page',
 	standalone: true,
 	imports: [
-    CommonModule,
-    HeaderComponent,
-    BannerComponent,
-    SearchComponent,
-    ProductSectionComponent,
-    ProductComponent,
-    CategoryComponent,
-    FooterComponent
-],
+		HttpClientModule,
+		CommonModule,
+		HeaderComponent,
+		BannerComponent,
+		SearchComponent,
+		ProductSectionComponent,
+		ProductComponent,
+		CategoryComponent,
+		FooterComponent,
+		LoadingComponent
+	],
 	templateUrl: './home-page.component.html',
 	styleUrl: './home-page.component.scss'
 })
 export class HomePageComponent implements OnInit {
-	public recentPacks!: ProductMini[];
-	public packCategories!: Category[];
-	public bestSellers!: ProductMini[];
-	public gameCategories!: Category[];
-	public recommendations!: ProductMini[];
+	public loadData: boolean = false;
+
+	public recentProducts: ProductMini[] = [];
+	public productCategories: Category[] = [];
+	public bestSellers: ProductMini[] = [];
+	public gameCategories: string[] = [];
+	public recommendations: ProductMini[] = [];
 
 	public constructor(
 		private _viewModel: HomePageViewModel,
-		private _nav: Router
+		private _nav: Router,
+		private _cdr: ChangeDetectorRef
 	) {}
 
 	public async ngOnInit(): Promise<void> {
 		try {
-			this.recentPacks     = await this._viewModel.getRecentPacks();
-			this.packCategories  = await this._viewModel.getPackCategories();
-			this.bestSellers     = await this._viewModel.getBestSellers();
-			this.gameCategories  = await this._viewModel.getGameCategories();
-			this.recommendations = await this._viewModel.getRecommendations();
+			const page = await this._viewModel.getPageContent();
+
+			if (page.statusCode == 200) {
+				const pageObject = page.content[0];
+
+				this.recentProducts = pageObject.productsMini[0];
+				this.productCategories = pageObject.categories[0];
+				this.bestSellers = pageObject.productsMini[1];
+				this.gameCategories = pageObject.strings[0];
+				this.recommendations = pageObject.productsMini[2];
+
+				this.loadData = true;
+				this._cdr.detectChanges();
+			} else {
+				console.warn('Erro na requisição...');
+				this._nav.navigate(['/error', 404]);
+			}
 		}
 		catch(error) {
 			console.error(error);

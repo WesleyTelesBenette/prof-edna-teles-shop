@@ -1,8 +1,8 @@
 
 <article class="product">
-	<div class="product-container-top click">
+	<div class="product-container-top click" (click)="gotoProduct()">
 		<div class="product-image-container">
-			<img class="product-image" [src]="product.imageCover"/>
+			<img class="product-image" [src]="image"/>
 		</div>
 		<h4 class="product-title">{{ product.name }}</h4>
 	</div>

@@ -1,7 +1,16 @@
 
 <article class="category">
-	<img class="category-image" [src]="category.imageUrl"/>
-	<a class="category-link click" target="_blank" [href]="category.imageUrl">
-		{{ category.name }}
-	</a>
+
+	<ng-container *ngIf="category !== null">
+		<a class="category-link click">
+			{{ category.name }}
+		</a>
+	</ng-container>
+
+	<ng-container *ngIf="category == null">
+		<a class="category-link click">
+			{{ name }}
+		</a>
+	</ng-container>
+
 </article>

@@ -2,6 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { AfterViewInit, Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import SearchViewModel from '../../view-models/search.viewmodel';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-search',
@@ -16,7 +17,8 @@ export class SearchComponent implements AfterViewInit {
 
 	constructor(
 		@Inject(PLATFORM_ID) private platformId: Object,
-		private _viewModel: SearchViewModel
+		private _viewModel: SearchViewModel,
+		private _nav: Router,
 	) {}
 
 	public ngAfterViewInit(): void {
@@ -36,7 +38,8 @@ export class SearchComponent implements AfterViewInit {
 		const searchInput = this.searchInput.nativeElement;
 
 		if (searchInput) {
-			this._viewModel.searchProducts(searchInput.value);
+			const terms = searchInput.value.replace(/ /g, '+');
+			this._nav.navigate(['/search', terms]);
 		}
 	}
 }

@@ -2,7 +2,7 @@
 	<div class="header-container">
 		<h2 class="header-title click" (click)="gotoMenu()">Professora Edna Teles</h2>
 		<nav id="header-navbar" class="header-links">
-			<a *ngFor="let link of linksList" class="header-link click-fill" [href]="link.link">
+			<a *ngFor="let link of linksList" class="header-link click-fill" (click)="gotoLink(link.link)">
 				{{ link.label }}
 			</a>
 		</nav>
@@ -12,7 +12,7 @@
 			<img id="menuOptions" ngbDropdownToggle class="header-button-image" src="./assets/images/menu.svg" />
 
 			<div class="header-menu" ngbDropdownMenu aria-labelledby="menuOptions">
-				<a *ngFor="let link of linksList" class="header-menu-item click-fill" [href]="link.link" ngbDropdownItem>
+				<a *ngFor="let link of linksList" class="header-menu-item click-fill" (click)="gotoLink(link.link)" ngbDropdownItem>
 					{{ link.label}}
 				</a>
 			</div>

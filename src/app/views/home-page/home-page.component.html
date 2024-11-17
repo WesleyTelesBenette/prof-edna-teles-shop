@@ -1,43 +1,49 @@
 
-<app-header/>
+<ng-container *ngIf="loadData === false">
+	<app-loading/>
+</ng-container>
 
-<app-banner/>
+<ng-container *ngIf="loadData === true">
+	<app-header/>
 
-<app-search/>
+	<app-banner/>
 
-<app-product-section [color]="'colorful'" [title]="'JOGOS RECENTES'">
-	<app-product
-		*ngFor="let product of recentPacks"
-		[product]='product'
-	/>
-</app-product-section>
+	<app-search/>
 
-<app-product-section [color]="'white'" [title]="'CATEGORIAS'">
-	<app-category
-		*ngFor="let category of packCategories"
-		[category]="category"
-	/>
-</app-product-section>
+	<app-product-section [color]="'colorful'" [title]="'JOGOS RECENTES'">
+		<app-product
+			*ngFor="let product of recentProducts"
+			[product]='product'
+		/>
+	</app-product-section>
 
-<app-product-section [color]="'colorful'" [title]="'MAIS VENDIDOS'">
-	<app-product
-		*ngFor="let product of bestSellers"
-		[product]='product'
-	/>
-</app-product-section>
+	<app-product-section [color]="'white'" [title]="'CATEGORIAS'">
+		<app-category
+			*ngFor="let category of productCategories"
+			[category]="category"
+		/>
+	</app-product-section>
 
-<app-product-section [color]="'white'" [title]="'TIPOS DE JOGOS'">
-	<app-category
-		*ngFor="let category of gameCategories"
-		[category]="category"
-	/>
-</app-product-section>
+	<app-product-section [color]="'colorful'" [title]="'MAIS VENDIDOS'">
+		<app-product
+			*ngFor="let product of bestSellers"
+			[product]='product'
+		/>
+	</app-product-section>
 
-<app-product-section [color]="'colorful'" [title]="'RECOMENDAÇÕES PARA VOCÊ'">
-	<app-product
-		*ngFor="let product of recommendations"
-		[product]='product'
-	/>
-</app-product-section>
+	<app-product-section [color]="'white'" [title]="'TIPOS DE JOGOS'">
+		<app-category
+			*ngFor="let category of gameCategories"
+			[name]="category"
+		/>
+	</app-product-section>
 
-<app-footer/>
+	<app-product-section [color]="'colorful'" [title]="'RECOMENDAÇÕES PARA VOCÊ'">
+		<app-product
+			*ngFor="let product of recommendations"
+			[product]='product'
+		/>
+	</app-product-section>
+
+	<app-footer/>
+</ng-container>

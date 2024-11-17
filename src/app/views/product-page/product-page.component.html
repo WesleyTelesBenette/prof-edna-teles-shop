@@ -1,55 +1,60 @@
 
-<app-header/>
+<ng-container *ngIf="loadData === false">
+	<app-loading/>
+</ng-container>
 
-<main class="product">
-	<div class="product-presentation">
+<ng-container *ngIf="loadData">
+	<app-header/>
 
-		<div class="product-images">
-			<figure class="product-thumb-container">
-				<img class="product-thumb" [src]="product.images[coverImageIndex]"/>
-			</figure>
-			<div class="product-mini-images">
+	<main class="product">
+		<div class="product-presentation">
 
-				<figure *ngFor="let image of product.images" class="product-mini-image-container">
-					<img class="product-mini-image click" [src]="image"/>
+			<div class="product-images">
+				<figure class="product-thumb-container">
+					<img class="product-thumb" [src]="formatImage(product.images[coverImageIndex])"/>
 				</figure>
+				<div class="product-mini-images">
+
+					<figure *ngFor="let image of product.images; let i = index" class="product-mini-image-container">
+						<img class="product-mini-image click" [src]="formatImage(image)" (click)="setCoverImageIndex(i)"/>
+					</figure>
+				</div>
+			</div>
+
+			<div class="product-info">
+				<h1 class="product-title">{{ product.name }}</h1>
+				<p class="product-text">{{ product.description }}</p>
+				<h2 class="product-subtitle">Detalhes</h2>
+
+				<ng-container *ngIf="product.type == 'game'">
+					<p class="product-text"><span>Peças:</span> {{ product.totalPieces }} unidade.</p>
+					<p class="product-text"><span>Jogadores:</span> {{ product.totalPlayers }} pessoas.</p>
+					<p class="product-text"><span>Formato:</span> Jogo em PDF (arquivo enviado por e-mail).</p>
+				</ng-container>
+				<ng-container *ngIf="product.type == 'pack'">
+					<p class="product-text"><span>Quantidade de Jogos: </span> {{ product.totalGames } jogos.</p>
+					<p class="product-text"><span>Jogos</span> {{ product.includeGamesIds}}.</p>
+					<p class="product-text"><span>Formato:</span> Jogos em PDF (arquivos enviados por e-mail).</p>
+				</ng-container>
+				<div class="product-price-container">
+					<h2 class="product-price-old">
+						<span>de R${{ priceOld }}</span> &nbsp; por apenas
+					</h2>
+					<h2 class="product-price">
+						<p class="reais">R${{ priceInteger }}</p>
+						<p class="cents">,{{ priceDecimal }}</p>
+					</h2>
+				</div>
+				<div class="product-buttons">
+					<button class="product-button click">
+						<img class="product-button-card" src="./assets/images/cart-add.svg"/>
+						Adicionar ao carrinho
+					</button>
+					<button class="product-button click">Comprar</button>
+				</div>
 			</div>
 		</div>
 
-		<div class="product-info">
-			<h1 class="product-title">{{ product.name }}</h1>
-			<p class="product-text">{{ product.description }}</p>
-			<h2 class="product-subtitle">Detalhes</h2>
-
-			<ng-container *ngIf="product.type == 'game'">
-				<p class="product-text"><span>Peças:</span> {{ product.totalPieces }} unidade.</p>
-				<p class="product-text"><span>Jogadores:</span> {{ product.totalPlayers }} pessoas.</p>
-				<p class="product-text"><span>Formato:</span> Jogo em PDF (arquivo enviado por e-mail).</p>
-			</ng-container>
-			<ng-container *ngIf="product.type == 'pack'">
-				<p class="product-text"><span>Quantidade de Jogos: </span> {{ product.totalGames } jogos.</p>
-				<p class="product-text"><span>Jogos</span> {{ product.includeGamesIds}}.</p>
-				<p class="product-text"><span>Formato:</span> Jogos em PDF (arquivos enviados por e-mail).</p>
-			</ng-container>
-			<div class="product-price-container">
-				<h2 class="product-price-old">
-					<span>de R${{ priceOld }}</span> &nbsp; por apenas
-				</h2>
-				<h2 class="product-price">
-					<p class="reais">R${{ priceInteger }}</p>
-					<p class="cents">,{{ priceDecimal }}</p>
-				</h2>
-			</div>
-			<div class="product-buttons">
-				<button class="product-button click">
-					<img class="product-button-card" src="./assets/images/cart-add.svg"/>
-					Adicionar ao carrinho
-				</button>
-				<button class="product-button click">Comprar</button>
-			</div>
-		</div>
-	</div>
-
-</main>
-
-<app-footer/>
+	</main>
+	<app-footer/>
+</ng-container>
